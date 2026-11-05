@@ -1331,7 +1331,7 @@ class ServerManagedFieldsTests(unittest.TestCase):
             report=self.preview_audit(actual,expected,ctx)
             with self.subTest(representation=representation):self.assertEqual(report['status'],'SERVER_MANAGED_READBACK_PASS',report)
             detail=report['checks']['derived_previews']['detail']['provenance']['byte_metadata'][0]
-            self.assertEqual(detail['parser_output']['parser']['dependency_version'],'6.21.2')
+            self.assertEqual(detail['parser_output']['parser']['dependency_version'],'6.21.4')
             self.assertEqual(detail['parser_output']['parser']['name'],'ViridisApprovedPDFByteFacts')
             self.assertEqual(detail['parser_output']['facts']['page_count']['value'],2)
             self.assertEqual(detail['parser_output']['facts']['width']['decimal'],'612')
