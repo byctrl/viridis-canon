@@ -1,7 +1,9 @@
 name = "ViridisCanon"
 # P0 retains its declared Lean 4.24 / Mathlib f897 toolchain and is built by
-# compat/v4_24. All other default targets use the current 4.28 toolchain.
+# compat/v4_24. All other default targets use the current 4.28 toolchain,
+# including P0_IntelligenceBound_Current, the current-toolchain port of P0.
 defaultTargets = [
+  "P0_IntelligenceBound_Current",
   "P1_DScore",
   "P2_HDFM_POC",
   "P3_Impossibility",
@@ -203,6 +205,12 @@ globs = ["BoundedMemoryLearning"]
 # non-allowlisted axiom or sorryAx. See AxiomAudit.lean / CHANGELOG_v9.1.0.md.
 # v9.1.0 INV-4 fix — honest, non-vacuous bounded-memory dissipation floor
 # (Aristotle run 6483ae65, 2026-06-21; replaces the dead-h_mem finite_memory_dissipation).
+# P0 current-toolchain port (Lean 4.28 / Mathlib 8f9d9cf): statements unchanged
+# from P0_IntelligenceBound_COMPILED; one proof repaired for the newer Mathlib.
+[[lean_lib]]
+name = "P0_IntelligenceBound_Current"
+globs = ["P0_IntelligenceBound.Current"]
+
 [[lean_lib]]
 name = "BoundedMemoryDissipation"
 globs = ["BoundedMemoryDissipation"]

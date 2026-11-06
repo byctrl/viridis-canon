@@ -20,6 +20,7 @@ alone.
 -/
 import Mathlib
 -- Verified-spine modules (P9 is QUARANTINED and intentionally absent):
+import P0_IntelligenceBound.Current
 import P1_DScore
 import P2_HDFM_POC
 import P3_Impossibility
@@ -62,7 +63,7 @@ def viridisAllowedAxioms : List Name :=
 /-- Modules whose declarations constitute the verified spine. Keep in lockstep
     with `lakefile.toml` `defaultTargets` (minus quarantined modules). -/
 def viridisSpineModules : List Name :=
-  [`P1_DScore, `P2_HDFM_POC, `P3_Impossibility,
+  [`P0_IntelligenceBound.Current, `P1_DScore, `P2_HDFM_POC, `P3_Impossibility,
    `P4_ThermodynamicEconomics, `Bridge_MissionFeasibility, `PSIT_Symplectic,
    `EcoChain_DendriticCorridor, `Book_HeatAndDisorder, `ConservationOperator,
    `Bridge_EcoChainInstrument, `Bridge_BiosphereProductivity,
